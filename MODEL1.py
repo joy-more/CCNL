@@ -8,7 +8,7 @@ class BGTGANModel(BaseModel):
         self.print_network(self.net)
 
         # load pretrained model
-        load_path = self.opt['path'].get('pretrain_network_g', None)
+        load_path = self.opt['path'].get('pretrain_network', None)
         if load_path is not None:
             param_key = self.opt['path'].get('param_key', 'params')
             self.load_network(self.net, load_path, self.opt['path'].get('strict_load', True), param_key)
