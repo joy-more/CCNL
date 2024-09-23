@@ -5,7 +5,6 @@ for img_path in img_list:
         basename, ext = os.path.splitext(img_name)
         input_img = cv2.imread(img_path, cv2.IMREAD_COLOR)
 
-        # restore faces and background if necessary
         cropped_faces, restored_faces, restored_imgs = restorer.enhance(
             input_img,
             has_aligned=args.aligned,
